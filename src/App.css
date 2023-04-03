@@ -1,18 +1,15 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +20,104 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
+.Head{
+  margin: 0 0 3rem 0;
+  /* padding: 1rem; */
+}
+#TitleForm{
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.Con{
+  background-color: #072d38;
+  border-radius: 20px;
+  box-shadow: 10px 5px 8px #537bc9;
+  color: white;
+  padding:100px;
+}
+.Flex{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0 10px 5px 10px;
+  box-sizing: border-box;
+  color: #002b81;
+  width: auto;
+  border-width: 0.5px;
+  border-color: #61dafb;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.26);
+}
+input::placeholder{
+  font-size: 28px;
+  position: relative;
+  /* display: inline-block; */
+}
+label{
+  font-size: 30px;
+  font-weight: bold;
+}
+.Submit{
+  text-align: center;
+  margin: 50px 0 0 0;
+  font-size: 2rem;
+}
+.Submitbut{
+    width: 300px;
+    height: 55px;
+    text-align: center;
+    font-weight: bold;
+}
+.Input-control{
+  border-radius: 5px;
+  padding: 0 10px 5px 10px;
+  box-sizing: border-box;
+  color: #002b81;
+  width: auto;
+  border-width: 0.5px;
+  border-color: #61dafb;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.26);
+}
 
+.Content-header {
+  background-image: linear-gradient(-45deg, #020024 50%, #4e4e4e 50%, #bebebe 100%) ;
+  /* background-image: linear-gradient(-45deg, #020024 0%, #4e4e4e 50%, #bebebe 100%) ; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #616670;
+}
+.ErrVal{
+  font-size: 18px;
+  color: #ff5252;
+}
+.Field-1{
+  margin: 12px;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+}
+.Field-2{
+  margin: 12px;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+}
+.Field-3{
+  margin: 12px;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

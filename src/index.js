@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import reportWebVitals from './reportWebVitals';
+import 'react-bootstrap';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoute from './component/pertemuan-3/apps/AppRoute';
 
+const { PUBLIC_URL } = process.env;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename={PUBLIC_URL}>
+      <AppRoute />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
