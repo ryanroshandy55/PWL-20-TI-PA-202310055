@@ -16,10 +16,9 @@ export function Products() {
   const getProduct = () => {
     setProduct({...product, loading:true});
 
-    let config = {
-      method: 'get',
-      maxBodyLength: Infinity,
-      url: 'http://localhost:8080/api/products',
+    var config = {
+      method: 'GET',
+      url: "http://localhost:8080/api/products",
       headers: { }
     };
 
@@ -70,8 +69,8 @@ export function Products() {
           </div>
          
           {(product.loading) ? <LoadingSpin /> : ""}
-          {(product.message) ? <AlertInfo message={product.message} variant={"danger"} /> :"" }
-          <div className="product-items ">
+          {(product.message) ? <AlertInfo message={product.message} variant={"danger"} /> : "" }
+          <div className="product-items">
             <TableData data={product.data} />
           </div>
         </div>

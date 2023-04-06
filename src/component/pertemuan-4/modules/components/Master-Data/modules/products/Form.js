@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { openModal } from "../../../../../layouts/components/modals/ModalPopUp";
-import PackageJSON from "../../../../../../../../package.json";
+// import PackageJSON from "../../../../../../../../package.json";
 import axios from "axios";
 
 export function Form(props) {
@@ -59,7 +59,7 @@ export function Form(props) {
               type="text"
               name="name"
               className="form-control"
-              defaultValue={postData.name}
+              // defaultValue={postData.name}
               onChange={(e) =>
                 setPostData({ ...postData, name: e.target.value })
               }
@@ -70,7 +70,7 @@ export function Form(props) {
             <textarea
               name="desc"
               className="form-control"
-              defaultValue={postData.description}
+              // defaultValue={postData.description}
               onChange={(e) =>
                 setPostData({ ...postData, description: e.target.value })
               }
@@ -84,7 +84,7 @@ export function Form(props) {
                   type="number"
                   name="name"
                   className="form-control"
-                  defaultValue={postData.stock}
+                  // defaultValue={postData.stock}
                   onChange={(e) =>
                     setPostData({ ...postData, stock: e.target.value })
                   }
@@ -100,7 +100,7 @@ export function Form(props) {
                     type="text"
                     name="price"
                     className="form-control"
-                    defaultValue={postData.price}
+                    // defaultValue={postData.price}
                     onChange={(e) =>
                       setPostData({ ...postData, price: e.target.value })
                     }

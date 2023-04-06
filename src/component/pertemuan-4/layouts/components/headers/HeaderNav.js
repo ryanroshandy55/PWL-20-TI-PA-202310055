@@ -1,5 +1,7 @@
 import React from 'react'
+// import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom';
+
 
 export default function HeaderNav() {
     const menuList = [{ id: 1, name: "Home", path: "/home", icon:"bi-house-door" },
@@ -9,7 +11,7 @@ export default function HeaderNav() {
                       { id: 5, name: "Log Out", path: "/log-out", icon:"bi-box-arrow-left" }];
     return (
         <header>
-            <nav className="navbar navbar-expand-md fixed-top shadow mb-5 position-relative">
+            <nav className="nav navbar navbar-expand-md fixed-top shadow mb-5 position-relative" defaultActiveKey={'/home'}>
                 <div className="container">
                     <a className="navbar-brand" href="#">
                         <img src="https://www.ibik.ac.id/wp-content/uploads/2023/03/logo-ibik-web.png" alt="ibik-logo" 
@@ -20,11 +22,11 @@ export default function HeaderNav() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <div className="d-flex w-100 justify-content-end">
-                            <div id='main-nav'>
+                            <div id='main-nav align-item-center btn text-hover-primary'>
                                 <ul className="navbar-nav me-auto mb-2 mb-md-0">
                                     {menuList.map((v, index) => (
-                                        <li className="nav-item me-1" key={index}>
-                                            <NavLink className="nav-link text-hover-success px-3" to={v.path}>
+                                        <li className="nav-item me-1 btn" key={index}>
+                                            <NavLink className="nav-link px-3" to={v.path}>
                                                 <i className={"bi me-2 fs-5 text-dark "+v.icon}></i>
                                                 {v.name}
                                             </NavLink>

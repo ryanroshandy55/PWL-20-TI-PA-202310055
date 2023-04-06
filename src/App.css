@@ -1,3 +1,9 @@
+a::active {
+  background-color: #002b81;
+}
+.Non-decor-text {
+  text-decoration: none;
+}
 .App {
   text-align: left;
 }

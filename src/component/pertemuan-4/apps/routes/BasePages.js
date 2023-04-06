@@ -10,8 +10,8 @@ import FYP from '../../modules/components/Explore/widgets/FYP'
 import Profiles from '../../modules/components/Profiles/Profiles'
 import Error404 from '../../layouts/components/error-404/Error404'
 import MasterData from '../../modules/components/Master-Data/MasterData'
-import { Products } from '../../modules/components/Master-Data/modules/products'
-import Users from '../../modules/components/Master-Data/modules/users/Users'
+import { Products } from '../../modules/components/Master-Data/modules/products/Products'
+import { Users } from '../../modules/components/Master-Data/modules/users'
 
 
 export default function BasePages() {

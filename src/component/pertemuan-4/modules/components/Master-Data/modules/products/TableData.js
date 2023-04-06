@@ -38,19 +38,18 @@ export default function TableData({data}) {
 
   return (
     <div className="list-product">
-    <div className="row">
-      {
-      (Object.values(data).length > 0) ? (
-      data.map((v, index) => (
-          <div className="col-3" key={index}>
-          <ItemProduct item={v} />
-        </div>
-      ))
-
-      ) : (
-        <p className="text-danger">No record found</p>
-      )
-    }
+      <div className="row mb-3">
+        {
+        (Object.values(data).length > 0) ? (
+        data.map((v, index) => (
+            <div className="col-3" key={index}>
+            <ItemProduct item={v} />
+          </div>
+        ))
+        ) : (
+          <p className="text-danger">No record found</p>
+        )
+       }
       </div>
     </div>
   );
