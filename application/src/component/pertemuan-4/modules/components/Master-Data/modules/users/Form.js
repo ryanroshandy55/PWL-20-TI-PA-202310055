@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export function Form(props) {
     const [postData, setPostData] = useState({
-        npm: "",
+        npm: Number,
         firstname: "",
         middlename: "",
         lastname: "",
@@ -25,7 +25,7 @@ export function Form(props) {
             .request(config)
             .then((response) => {
                 // console.log(JSON.stringify(response.data));
-                let results = response.data;
+                let results = response.data.data;
                 if (results) {
                     openModal({ header: "Info", message: "Successfully submited" });
                     props.getUser();
@@ -34,7 +34,7 @@ export function Form(props) {
                 }
             })
             .catch((error) => {
-                openModal({ header: "Error", message: Response.error });
+                openModal({ header: "Error", message: "Isi Data Dengan Benar" });
             });
     };
 
@@ -58,11 +58,10 @@ export function Form(props) {
                     <div className='mb-3'>
                         <label className='form-label'>NPM</label>
                         <input
-                            type='number'
+                            type='text'
                             name='npm'
-                            maxLength={15}
                             className='form-control'
-                            onSubmit={(e) => setPostData({ ...postData, npm: e.target.value })} />
+                            onChange={(e) => setPostData({ ...postData, npm: e.target.value })} />
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>FirstName</label>
@@ -70,7 +69,7 @@ export function Form(props) {
                             type='text'
                             name='firstname'
                             className='form-control'
-                            onSubmit={(e) => setPostData({ ...postData, firstname: e.target.value })} />
+                            onChange={(e) => setPostData({ ...postData, firstname: e.target.value })} />
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>MiddleName</label>
@@ -78,7 +77,7 @@ export function Form(props) {
                             type='text'
                             name='middlename'
                             className='form-control'
-                            onSubmit={(e) => setPostData({ ...postData, middlename: e.target.value })} />
+                            onChange={(e) => setPostData({ ...postData, middlename: e.target.value })} />
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>LastName</label>
@@ -86,7 +85,7 @@ export function Form(props) {
                             type='text'
                             name='lastname'
                             className='form-control'
-                            onSubmit={(e) => setPostData({ ...postData, lastname: e.target.value })} />
+                            onChange={(e) => setPostData({ ...postData, lastname: e.target.value })} />
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>Email</label>
@@ -94,18 +93,19 @@ export function Form(props) {
                             type='email'
                             name='email'
                             className='form-control'
-                            onSubmit={(e) => setPostData({ ...postData, email: e.target.value })} />
+                            onChange={(e) => setPostData({ ...postData, email: e.target.value })} />
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>Birthdate</label>
                         <input
-                            className='form-control'
-                            type='date'
+                            type='string'
                             name='birthdate'
-                            onSubmit={(e) => setPostData({ ...postData, birtdate: e.target.addEventListener })} />
+                            className='form-control datepicker'
+                            placeholder='YYYY-MM-DD // Year-Month-Day'
+                            onChange={(e) => setPostData({ ...postData, birthdate: e.target.value })} />
                     </div>
                     <div className='text-end mt-3'>
-                        <button className='btn btn-light' type='reset'>
+                        <button className='btn btn-light' type='button'>
                             Cancel
                         </button>
                         <button className='btn btn-primary' type='submit'>

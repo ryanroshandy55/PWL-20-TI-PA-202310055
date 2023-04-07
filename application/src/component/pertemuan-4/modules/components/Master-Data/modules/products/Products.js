@@ -41,7 +41,7 @@ export function Products() {
     <div id="product-master">
       <div className="row">
         <div className="col-sm-12 col-lg-8">
-          <div className="d-flex flex-wrap flex-stack pb-7">
+          <div className="d-flex mb-3 flex-wrap flex-stack pb-7 justify-content-between">
             <div className="d-flex flex-wrap align-items-center my-1">
               <h3 className="fw-bolder me-5 my-1">{Object.values(product.data).length} items of product</h3>
             </div>

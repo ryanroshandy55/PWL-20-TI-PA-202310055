@@ -14,12 +14,12 @@ export default class MasterData extends Component {
   render() {
     return (
       <div id="master-data" className="container">
-        <div className="row items mb-8">
+        <div className="row items mb-5 justify-content-center">
           {this.state.items.map((v, index) => (
-            <div className="col-sm-12 col-lg-3 item btn btn-outline" data-bs-toggle="button" key={index}>
-              <NavLink to={v.link} className="card bg-white text-decoration-none justify-content-center" data-bs-toggle="button">
+            <div className="col-sm-12 col-lg-3 item btn btn-outline " data-bs-toggle="button" key={index}>
+              <NavLink to={v.link} className="card bg-white text-decoration-none text-hover-primary" data-bs-toggle="button">
                 <div className="card-body text-center">
-                  <h3 className="text-dark text-hover-primary">{v.name}</h3>
+                  <h3 className="text-dark">{v.name}</h3>
                   <p className="mb-0 text-muted">Master data control {v.name}</p>
                 </div>
               </NavLink>

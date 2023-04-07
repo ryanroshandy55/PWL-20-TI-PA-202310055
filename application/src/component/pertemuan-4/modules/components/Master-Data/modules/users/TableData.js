@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
 export default function TableData({data}) {
   const UserList = ({user}) => {
     return (
-      <div class="card mb-3" style={{maxWidth: "540px", background:"white"}}>
+      <div class="card mb-8" style={{maxWidth: "540px", background:"white"}}>
         <div class="row g-0">
           <div class="col-md-4">
             <img src={require("../../../../../assets/media/user/user.png")} className="img-fluid rounded-start" alt="..." />
@@ -12,7 +12,7 @@ export default function TableData({data}) {
             <div class="card-body">
               <h5 class="card-title">Npm : {user.npm}</h5>
               <p class="card-text">Name : {user.firstname} {user.middlename} {user.lastname} </p>
-              <p class="card-text">Birthdate :{ user.birthdate }</p>
+              <p class="card-text">Birthdate : {user.birthdate}</p>
             </div>
           </div>
         </div>
@@ -21,40 +21,19 @@ export default function TableData({data}) {
   };
 
   return (
-    <div className=''>
-      <div className='row d-flex mb-2'>
+    <div className="user-list">
+      <div className="d-flex flex-column mb-3">
         {
-          (Object.values(data).length > 0) ? (
+          (Object.values(data).length > 0) ? 
             data.map((v, index) => (
-                <div className='col-3' key={index} > 
-                <UserList item={v} />
+              <div className="col-md-auto mb-4" key={index} > 
+              <UserList user={v} />
               </div>
-            ))
-            ) : (
-            <p className='text-danger'>No Record Found</p>
+            )) : (
+            <p className="text-danger">No Record Found</p>
           )
         }
       </div>
     </div>
   );
 }
-
-// return (
-//   <div className="list-product">
-//   <div className="row mb-3">
-//     {
-//     (Object.values(data).length > 0) ? (
-//     data.map((v, index) => (
-//         <div className="col-3" key={index}>
-//         <ItemProduct item={v} />
-//       </div>
-//     ))
-
-//     ) : (
-//       <p className="text-danger">No record found</p>
-//     )
-//   }
-//     </div>
-//   </div>
-// );
-
